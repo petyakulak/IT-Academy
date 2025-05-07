@@ -2,6 +2,8 @@ package org.example;
 
 import java.util.Scanner;
 
+import java.util.Arrays;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -52,6 +54,49 @@ class Maximum {
         }
 
         System.out.println("Максимальное число: " + max);
+    }
+}
+
+class ArraySort {
+    public static void main(String[] args) {
+        int[][] array = new int[5][5];
+        int chislo = 25;
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                array[i][j] = chislo;
+                --chislo;
+            }
+        }
+
+        for (int i = 0; i < 5; i++) {
+            Arrays.sort(array[i]);
+        }
+
+        System.out.println("\nОтсортированный массив:");
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print(array[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+        System.out.println("\nДиагональные элементы после сортировки:");
+        for (int i = 0; i < 5; i++) {
+            System.out.printf(i + 1 + " элемент = " + array[i][i] + "\n");
+        }
+    }
+}
+
+class SpaceDeleter {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        String stroka = console.nextLine();
+
+        String noSpaaces = stroka.replace(" ", "");
+
+        System.out.println("Строка без пробелов: " + noSpaaces);
     }
 }
 
