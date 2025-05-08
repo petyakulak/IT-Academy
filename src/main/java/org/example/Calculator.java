@@ -2,7 +2,7 @@ package org.example;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class calculator {
+public class Calculator {
     public static void main(String[] args) {
         String otvet = "да";
         while (otvet.equalsIgnoreCase("да")) {
